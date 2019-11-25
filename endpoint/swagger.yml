@@ -1,0 +1,96 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file for scientific calculator
+  version: "1.0.0"
+  title: Swagger ReST Article
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /scientificcalc
+paths:
+  /src/driver/ScientificCalc/ScientificCalc/addition/{add_input1},{add_input2}:
+    get:
+      operationId: src.driver.ScientificCalc.ScientificCalc.addition
+      tags:
+        - calc add
+      summary: Read 2 numbers to perform addition operation
+      description: Read 2 numbers
+      parameters:
+        - name: add_input1
+          in: path
+          type: number
+          required: true
+        - name: add_input2
+          in: path
+          type: number
+          required: true
+      responses:
+        200:
+          description: Successfully performed addition
+          schema:
+            type: number
+  /src/driver/ScientificCalc/ScientificCalc/subtraction/{sub_input1},{sub_input2}:
+    get:
+      operationId: src.driver.ScientificCalc.ScientificCalc.subtraction
+      tags:
+        - calc sub
+      summary: Read 2 numbers to perform subtraction operation
+      description: Read 2 numbers
+      parameters:
+        - name: sub_input1
+          in: path
+          type: number
+          required: true
+        - name: sub_input2
+          in: path
+          type: number
+          required: true
+      responses:
+        200:
+          description: Successfully performed subtraction
+          schema:
+            type: number
+  /src/driver/ScientificCalc/ScientificCalc/multiply/{mul_input1},{mul_input2}:
+    get:
+      operationId: src.driver.ScientificCalc.ScientificCalc.multiply
+      tags:
+        - calc multiply
+      summary: Read 2 numbers to perform multiplication operation
+      description: Read 2 numbers
+      parameters:
+        - name: mul_input1
+          in: path
+          type: number
+          required: true
+        - name: mul_input2
+          in: path
+          type: number
+          required: true
+      responses:
+        200:
+          description: Successfully performed multiplication
+          schema:
+            type: number
+  /src/driver/ScientificCalc/ScientificCalc/divide/{div_input1},{div_input2}:
+    get:
+      operationId: src.driver.ScientificCalc.ScientificCalc.divide
+      tags:
+        - calc divide
+      summary: Read 2 numbers to perform division operation
+      description: Read 2 numbers
+      parameters:
+        - name: div_input1
+          in: path
+          type: number
+          required: true
+        - name: div_input2
+          in: path
+          type: number
+          required: true
+      responses:
+        200:
+          description: Successfully performed division
+          schema:
+            type: number
